@@ -36,4 +36,4 @@ pip install -r requirements.txt
 jupyter notebook notebooks/beginner.ipynb
 ```
 
-Google Colab에서는 위 표의 **Colab** 링크를 누른 뒤 `런타임 → 모두 실행`을 선택하면 됩니다. 데이터 경로 오류가 발생하면 `data/hannam_sinkhole_data.xlsx`를 Colab 세션에 업로드하세요.
+Google Colab에서는 위 표의 **Colab** 링크를 누른 뒤 셀을 위에서부터 차례로 실행하면 됩니다. 로컬 데이터 파일이 없으면 노트북이 GitHub의 실습 데이터를 자동으로 불러옵니다.
