@@ -112,7 +112,51 @@
 | 공동 | `cavity_count` | 발견된 지하공동 개수 |
 | 위험도 | `risk` | 예측할 위험도 등급 |
 
-## 6. 파생 변수
+## 6. 코드에서 사용하는 변수 묶음
+
+코드에 등장하는 `water_features`, `raw_features` 등의 이름은 Excel의 개별 컬럼이 아닙니다. **모델에 전달할 여러 컬럼명을 목적에 따라 묶어 놓은 Python 리스트**입니다.
+
+| Python 변수명 | 의미 | 포함되는 Excel 컬럼 |
+|---|---|---|
+| `water_features` | 시공 시기별 상수도관 길이 변수 묶음 | `water_Y_5` ~ `water_Y_55` |
+| `sewer_features` | 시공 시기별 하수도관 길이 변수 묶음 | `sewer_Y_5` ~ `sewer_Y_20` |
+| `basic_features` | 관로 밀집도만 사용하는 기준 변수 묶음 | `water_Density`, `sewer_Density` |
+| `raw_features` | 원본 데이터에서 바로 사용하는 관로·공동 변수 묶음 | `water_features`, `water_Density`, `sewer_features`, `sewer_Density`, `cavity_count` |
+| `derived_features` | 원본 변수를 조합하여 만든 파생 변수 묶음 | 관로 총길이, 전체 밀집도, 관로 비율, 노후도, 상호작용 변수 |
+| `engineered_features` | 원본 변수와 파생 변수를 모두 포함한 변수 묶음 | `raw_features + derived_features` |
+
+코드에서는 다음과 같은 관계로 정의합니다.
+
+```python
+water_features = [f"water_Y_{year}" for year in range(5, 60, 5)]
+sewer_features = [f"sewer_Y_{year}" for year in range(5, 25, 5)]
+
+basic_features = [
+    "water_Density",
+    "sewer_Density",
+]
+
+raw_features = (
+    water_features
+    + ["water_Density"]
+    + sewer_features
+    + ["sewer_Density", "cavity_count"]
+)
+
+engineered_features = raw_features + derived_features
+```
+
+> 예를 들어 `raw_features`라는 컬럼이 Excel에 존재하는 것이 아닙니다. `raw_features`는 Model B에 한 번에 전달할 여러 Excel 컬럼명을 저장한 Python 변수입니다.
+
+### 모델별 변수 구성
+
+| 모델 | 사용하는 Python 변수 | 확인하려는 내용 |
+|---|---|---|
+| Model A | `basic_features` | 관로 밀집도만으로 위험도를 구분할 수 있는가? |
+| Model B | `raw_features` | 시공 시기별 관로 길이와 공동 정보가 추가되면 성능이 달라지는가? |
+| Model C | `engineered_features` | 도메인 지식을 반영한 파생 변수가 추가되면 성능이 달라지는가? |
+
+## 7. 파생 변수
 
 | 컬럼 | 의미 |
 |---|---|
@@ -124,7 +168,7 @@
 | `recent_pipe_ratio` | 전체 관로 중 최근 관로 비율 |
 | `cavity_density_interaction` | 공동 개수와 전체 관로 밀집도의 상호작용 |
 
-## 7. 실습 진행 순서
+## 8. 실습 진행 순서
 
 ### Step 1. 데이터 확인
 
@@ -177,7 +221,7 @@ Model C의 변수 중요도를 확인하고 다음 질문을 논의합니다.
 - 노후 관로 비율이 높으면 지반함몰 가능성이 커질 수 있나요?
 - 변수 중요도가 높다는 것이 곧 원인과 결과를 의미하나요?
 
-## 8. 최종 정리
+## 9. 최종 정리
 
 다음 내용을 3~5문장으로 정리합니다.
 
