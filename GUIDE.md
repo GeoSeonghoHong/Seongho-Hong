@@ -108,7 +108,7 @@
 | 상수도관 | `water_Y_5` ~ `water_Y_55` | 시공 시기 구간별 상수도관 길이 |
 | 상수도관 밀집도 | `water_Density` | 해당 공간의 상수도관 밀집도 |
 | 하수도관 | `sewer_Y_5` ~ `sewer_Y_20` | 시공 시기 구간별 하수도관 길이 |
-| 하수도관 밀집도 | `sewer_total_density_km_km2` | 해당 공간의 하수도관 밀집도 |
+| 하수도관 밀집도 | `sewer_Density` | 해당 공간의 하수도관 밀집도 |
 | 공동 | `cavity_count` | 발견된 지하공동 개수 |
 | 위험도 | `risk` | 예측할 위험도 등급 |
 
@@ -140,7 +140,7 @@
 다음 두 개의 변수만 사용해 기준 모델을 만듭니다.
 
 - `water_Density`
-- `sewer_total_density_km_km2`
+- `sewer_Density`
 
 생각해 볼 질문:
 
