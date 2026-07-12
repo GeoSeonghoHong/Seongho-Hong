@@ -1,5 +1,51 @@
 # AI 기반 지반함몰 위험도 예측 실습 지침서
 
+## 실습에서 해결할 문제
+
+이번 실습의 핵심은 서로 다른 형태의 공간정보를 **동일한 분석 단위인 그리드**에 결합하는 것입니다. 매설관의 위치와 특성, 발견된 지하공동의 위치를 그리드별 데이터로 집계하면 각 칸마다 관로 밀집도, 시공 시기별 관로 길이, 공동 개수 등의 입력 변수를 만들 수 있습니다. AI 모델은 이 결합 데이터를 학습하여 각 그리드의 지반함몰 위험도를 Low, Medium, High로 예측합니다.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="assets/workflow/pipelines.jpeg" alt="매설관 공간정보" width="280"><br>
+      <strong>① 매설관 정보</strong><br>
+      상·하수도관의 위치와 시공 시기
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/workflow/cavities.jpeg" alt="지하공동 공간정보" width="280"><br>
+      <strong>② 공동 정보</strong><br>
+      발견된 지하공동의 위치
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/workflow/grid.jpeg" alt="분석 그리드" width="280"><br>
+      <strong>③ 분석 그리드</strong><br>
+      모델이 예측할 공간 단위
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><strong>↓ 공간정보 결합 및 그리드별 변수 집계 ↓</strong></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <img src="assets/workflow/combined.jpeg" alt="매설관 공동 그리드 결합 결과" width="560"><br>
+      <strong>④ 결합 데이터</strong><br>
+      각 그리드에 매설관과 공동 정보를 연결하여 AI가 학습할 표 형태의 데이터를 생성
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><strong>↓ AI 분류 모델 학습 및 예측 ↓</strong></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <img src="assets/workflow/risk-map.jpeg" alt="그리드별 지반함몰 위험도 예측 결과" width="560"><br>
+      <strong>⑤ 지반함몰 위험도 예측</strong><br>
+      각 그리드를 Low, Medium, High의 세 위험등급으로 분류
+    </td>
+  </tr>
+</table>
+
+> 즉, 이 실습의 Excel 데이터에서 **한 행은 하나의 그리드**를 의미합니다. 각 열은 해당 그리드 안에 포함된 매설관과 공동 정보를 수치화한 것이고, `risk`는 모델이 예측해야 할 위험등급입니다.
+
 ## 1. 실습 목표
 
 이번 실습에서는 도시 인프라 데이터를 이용하여 공간 단위의 지반함몰 위험도를 예측합니다.
