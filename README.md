@@ -18,7 +18,7 @@
 
 ## 실습 자료
 
-- [실습 지침서](GUIDE.md)
+- [실습 가이드](GUIDE.md)
 - [실습 데이터](data/hannam_sinkhole_data.xlsx)
 - [필요 패키지](requirements.txt)
 
