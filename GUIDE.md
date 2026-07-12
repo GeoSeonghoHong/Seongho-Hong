@@ -143,8 +143,20 @@ raw_features = (
     + ["sewer_Density", "cavity_count"]
 )
 
+derived_features = [
+    "total_water_length",
+    "total_sewer_length",
+    "pipe_total_density",
+    "water_sewer_ratio",
+    "old_pipe_ratio",
+    "recent_pipe_ratio",
+    "cavity_density_interaction",
+]
+
 engineered_features = raw_features + derived_features
 ```
+
+> `derived_features`는 이 코드에서 새로운 값을 계산하는 것이 아니라, Excel 데이터에 이미 포함된 7개 파생 변수 컬럼명을 하나의 Python 리스트로 묶은 것입니다. 각 파생 변수의 의미는 다음 절에서 확인할 수 있습니다.
 
 > 예를 들어 `raw_features`라는 컬럼이 Excel에 존재하는 것이 아닙니다. `raw_features`는 Model B에 한 번에 전달할 여러 Excel 컬럼명을 저장한 Python 변수입니다.
 
