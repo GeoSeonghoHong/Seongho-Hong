@@ -70,10 +70,10 @@
 
  학습 속도와 경험에 따라 다른 난이도로 이동하는 방식을 권장합니다. 세 노트북을 모두 수행할 필요는 없습니다.
 
-- [Beginner 노트북](notebooks/beginner.ipynb)
-- [Intermediate 노트북](notebooks/intermediate.ipynb)
-- [Advanced 노트북](notebooks/advanced.ipynb)
-- [Solution 노트북](notebooks/solution.ipynb)
+- [Beginner 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/beginner.ipynb)
+- [Intermediate 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/intermediate.ipynb)
+- [Advanced 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/advanced.ipynb)
+- [Solution 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/solution.ipynb)
 
 ## 3. 60분 실습 구성
 
