@@ -122,7 +122,7 @@
 | `sewer_features` | 시공 시기별 하수도관 길이 변수 묶음 | `sewer_Y_5` ~ `sewer_Y_20` |
 | `basic_features` | 관로 밀집도만 사용하는 기준 변수 묶음 | `water_Density`, `sewer_Density` |
 | `raw_features` | 원본 데이터에서 바로 사용하는 관로·공동 변수 묶음 | `water_features`, `water_Density`, `sewer_features`, `sewer_Density`, `cavity_count` |
-| `derived_features` | 원본 변수를 조합하여 만든 파생 변수 묶음 | 관로 총길이, 전체 밀집도, 관로 비율, 노후도, 상호작용 변수 |
+| `derived_features` | 원본 변수를 조합하여 만든 파생 변수 묶음 | `total_water_length`, `total_sewer_length`, `pipe_total_density`, `water_sewer_ratio`, `old_pipe_ratio`, `recent_pipe_ratio`, `cavity_density_interaction` |
 | `engineered_features` | 원본 변수와 파생 변수를 모두 포함한 변수 묶음 | `raw_features + derived_features` |
 
 코드에서는 다음과 같은 관계로 정의합니다.
