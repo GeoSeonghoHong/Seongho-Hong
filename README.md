@@ -11,10 +11,11 @@
 |---|---|---|---|
 | Beginner | Python·머신러닝 입문자 | 코드 대부분 제공, 실행과 결과 해석 중심 | [Colab](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/beginner.ipynb) |
 | Intermediate | pandas와 기본 ML 경험자 | 분석 골격 제공, 핵심 변수와 인수 완성 | [Colab](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/intermediate.ipynb) |
-| Advanced | 스스로 분석을 설계하고 싶은 학습자 | Task와 짧은 힌트만 제공 | [Colab](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/advanced.ipynb) |
+| Upper-Intermediate | 기본적인 모델 학습 코드를 이해하는 학습자 | 명확한 Task, 전체 코드 골격과 핵심 빈칸 제공 | [Colab](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/upper_intermediate.ipynb) |
+| Advanced | 머신러닝 코드를 직접 작성해 본 학습자 | 명확한 Task, 시작 구조와 함수 중심 힌트 제공 | [Colab](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/advanced.ipynb) |
 | Solution | 복습과 정답 확인 | 완성 코드와 결과 해설 | [Colab](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/solution.ipynb) |
 
-처음 참여하거나 Python 경험이 많지 않다면 **Beginner**로 시작하세요. Model A까지 수행한 뒤 여유가 있으면 Intermediate 또는 Advanced에 도전해도 좋습니다.
+처음 참여하거나 Python 경험이 많지 않다면 **Beginner**로 시작하세요. Model A까지 수행한 뒤 여유가 있으면 Intermediate, Upper-Intermediate 또는 Advanced에 도전해도 좋습니다.
 
 ## 실습 자료
 
