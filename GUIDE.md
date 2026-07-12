@@ -60,18 +60,20 @@
 
 ## 2. 난이도 선택
 
-세 과정은 동일한 데이터와 분석 목표를 사용합니다. 차이는 제공되는 코드와 힌트의 양입니다.
+네 과정은 동일한 데이터와 분석 목표를 사용합니다. 차이는 제공되는 코드와 힌트의 양입니다.
 
 | 과정 | 제공 수준 | 주요 활동 |
 |---|---|---|
 | Beginner | 코드 대부분 제공 | 셀 실행, 결과 관찰, 해석 질문 답변 |
 | Intermediate | 코드 골격과 일부 빈칸 제공 | 변수 선택, 함수 인수와 핵심 코드 완성 |
-| Advanced | 목표·조건·짧은 힌트 제공 | 분석 과정 직접 설계 및 구현 |
+| Upper-Intermediate | 명확한 Task, 전체 코드 골격과 핵심 빈칸 제공 | 데이터 분할, 학습·예측, 평가 지표의 핵심 코드 완성 |
+| Advanced | 명확한 Task, 시작 구조와 함수 중심 힌트 제공 | 안내된 구조를 바탕으로 핵심 분석 코드 직접 구현 |
 
- 학습 속도와 경험에 따라 다른 난이도로 이동하는 방식을 권장합니다. 세 노트북을 모두 수행할 필요는 없습니다.
+ 학습 속도와 경험에 따라 다른 난이도로 이동하는 방식을 권장합니다. 네 난이도 노트북을 모두 수행할 필요는 없습니다.
 
 - [Beginner 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/beginner.ipynb)
 - [Intermediate 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/intermediate.ipynb)
+- [Upper-Intermediate 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/upper_intermediate.ipynb)
 - [Advanced 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/advanced.ipynb)
 - [Solution 노트북 — Colab에서 실행](https://colab.research.google.com/github/GeoSeonghoHong/Seongho-Hong/blob/main/notebooks/solution.ipynb)
 
