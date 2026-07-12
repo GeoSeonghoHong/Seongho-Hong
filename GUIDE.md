@@ -112,7 +112,19 @@
 | 공동 | `cavity_count` | 발견된 지하공동 개수 |
 | 위험도 | `risk` | 예측할 위험도 등급 |
 
-## 6. 코드에서 사용하는 변수 묶음
+## 6. 파생 변수
+
+| 컬럼 | 의미 |
+|---|---|
+| `total_water_length` | 상수도관 전체 길이 |
+| `total_sewer_length` | 하수도관 전체 길이 |
+| `pipe_total_density` | 상수도관 밀집도와 하수도관 밀집도의 합 |
+| `water_sewer_ratio` | 상수도관 밀집도와 하수도관 밀집도의 비율 |
+| `old_pipe_ratio` | 전체 관로 중 노후 관로 비율 |
+| `recent_pipe_ratio` | 전체 관로 중 최근 관로 비율 |
+| `cavity_density_interaction` | 공동 개수와 전체 관로 밀집도의 상호작용 |
+
+## 7. 코드에서 사용하는 변수 묶음
 
 코드에 등장하는 `water_features`, `raw_features` 등의 이름은 Excel의 개별 컬럼이 아닙니다. **모델에 전달할 여러 컬럼명을 목적에 따라 묶어 놓은 Python 리스트**입니다.
 
@@ -156,7 +168,7 @@ derived_features = [
 engineered_features = raw_features + derived_features
 ```
 
-> `derived_features`는 이 코드에서 새로운 값을 계산하는 것이 아니라, Excel 데이터에 이미 포함된 7개 파생 변수 컬럼명을 하나의 Python 리스트로 묶은 것입니다. 각 파생 변수의 의미는 다음 절에서 확인할 수 있습니다.
+> `derived_features`는 이 코드에서 새로운 값을 계산하는 것이 아니라, Excel 데이터에 이미 포함된 7개 파생 변수 컬럼명을 하나의 Python 리스트로 묶은 것입니다. 각 파생 변수의 의미는 앞 절에서 확인할 수 있습니다.
 
 > 예를 들어 `raw_features`라는 컬럼이 Excel에 존재하는 것이 아닙니다. `raw_features`는 Model B에 한 번에 전달할 여러 Excel 컬럼명을 저장한 Python 변수입니다.
 
@@ -167,18 +179,6 @@ engineered_features = raw_features + derived_features
 | Model A | `basic_features` | 관로 밀집도만으로 위험도를 구분할 수 있는가? |
 | Model B | `raw_features` | 시공 시기별 관로 길이와 공동 정보가 추가되면 성능이 달라지는가? |
 | Model C | `engineered_features` | 도메인 지식을 반영한 파생 변수가 추가되면 성능이 달라지는가? |
-
-## 7. 파생 변수
-
-| 컬럼 | 의미 |
-|---|---|
-| `total_water_length` | 상수도관 전체 길이 |
-| `total_sewer_length` | 하수도관 전체 길이 |
-| `pipe_total_density` | 상수도관 밀집도와 하수도관 밀집도의 합 |
-| `water_sewer_ratio` | 상수도관 밀집도와 하수도관 밀집도의 비율 |
-| `old_pipe_ratio` | 전체 관로 중 노후 관로 비율 |
-| `recent_pipe_ratio` | 전체 관로 중 최근 관로 비율 |
-| `cavity_density_interaction` | 공동 개수와 전체 관로 밀집도의 상호작용 |
 
 ## 8. 실습 진행 순서
 
